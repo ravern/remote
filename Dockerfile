@@ -15,6 +15,10 @@ RUN chmod +x /usr/local/bin/ttyd
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
+RUN curl https://get.volta.sh | bash -s -- --skip-setup
+RUN /root/.volta/bin/volta install node@12
+RUN /root/.volta/bin/volta install yarn
+
 EXPOSE 7681
 
 ENTRYPOINT ["ttyd", "login"]
