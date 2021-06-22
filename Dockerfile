@@ -9,6 +9,9 @@ RUN printf "${PASSWORD}\n${PASSWORD}\n" | passwd
 RUN apt-get update
 RUN apt-get install -y wget
 RUN apt-get install -y curl
+RUN apt-get install -y zsh
+
+RUN chsh -s /usr/bin/zsh
 
 RUN wget -O /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.x86_64
 RUN chmod +x /usr/local/bin/ttyd
