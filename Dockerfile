@@ -30,6 +30,9 @@ RUN apt-get install -y python3-neovim
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 RUN mkdir -p .config/nvim
 COPY init.vim .config/nvim/init.vim
+RUN nvim +PlugInstall +qall
+RUN nvim +'CocInstall coc-rust-analyzer' +qall
+RUN nvim +CocUpdateSync +qall
 
 # Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
