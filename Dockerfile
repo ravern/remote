@@ -9,6 +9,7 @@ RUN printf "${PASSWORD}\n${PASSWORD}\n" | passwd
 RUN apt-get update
 
 # Basic packages
+RUN apt-get install -y git
 RUN apt-get install -y wget
 RUN apt-get install -y curl
 
