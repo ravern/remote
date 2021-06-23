@@ -9,11 +9,19 @@ RUN printf "${PASSWORD}\n${PASSWORD}\n" | passwd
 RUN apt-get update
 
 # Basic packages
-RUN apt-get install -y git
+RUN apt-get install -y build-essential
 RUN apt-get install -y wget
 RUN apt-get install -y curl
 RUN apt-get install -y tree
 RUN apt-get install -y ripgrep
+
+# Git
+RUN apt-get install -y git
+RUN ln -s .config/git/.gitconfig .gitconfig
+
+# tmux
+RUN apt-get install -y tmux
+RUN ln -s .config/tmux/.tmux.conf .tmux.conf
 
 # ttyd
 RUN wget -O /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.x86_64
