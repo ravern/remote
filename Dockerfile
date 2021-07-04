@@ -38,7 +38,7 @@ RUN mv starship /usr/local/bin/starship
 
 # Neovim
 RUN apt-get install -y python3-neovim
-RUN wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim-linux64.tar.gz
+RUN wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 RUN tar -xvzf nvim-linux64.tar.gz
 RUN rm nvim-linux64.tar.gz
 RUN mv nvim-linux64/bin/nvim /usr/local/bin/nvim
