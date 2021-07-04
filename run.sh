@@ -1,1 +1,1 @@
- ttyd -t 'theme={"background": "#0a0a0a", "foreground": "#B8B9B4", "cursor": "white", "black": "#0A0A0A", "red": "#939490", "green": "#5E6E5C", "yellow": "#B6B8B3", "blue": "#727370", "magenta": "#D1D1CB", "cyan": "#636361", "white": "#AAABA6", "brightBlack": "#2E2E2C", "brightRed": "#989995", "brightGreen": "#636361", "brightYellow": "#BBBDB8", "brightBlue": "#777875", "brightMagenta": "#D6D6D0", "brightCyan": "#696966", "brightWhite": "#AFB0AB"}' zsh
+ ttyd zsh
