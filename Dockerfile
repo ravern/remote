@@ -48,6 +48,10 @@ RUN rm -rf nvim-linux64
 
 # Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN wget https://github.com/rust-analyzer/rust-analyzer/releases/download/2021-06-28/rust-analyzer-x86_64-unknown-linux-gnu.gz
+RUN gunzip rust-analyzer-x86_64-unknown-linux-gnu.gz
+RUN chmod +x rust-analyzer-x86_64-unknown-linux-gnu
+RUN mv rust-analyzer-x86_64-unknown-linux-gnu /usr/local/bin/rust-analyzer
 
 # Node.js
 RUN curl https://get.volta.sh | bash -s -- --skip-setup
