@@ -14,6 +14,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y curl
 RUN apt-get install -y tree
 RUN apt-get install -y ripgrep
+RUN apt-get install -y libssl-dev
 
 # Git
 RUN apt-get install -y git
