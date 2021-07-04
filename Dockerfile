@@ -42,6 +42,8 @@ RUN wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64
 RUN tar -xvzf nvim-linux64.tar.gz
 RUN rm nvim-linux64.tar.gz
 RUN mv nvim-linux64/bin/nvim /usr/local/bin/nvim
+RUN mv nvim-linux64/share/nvim /usr/local/share/nvim
+RUN mv nvim-linux64/lib/nvim /usr/local/lib/nvim
 RUN rm -rf nvim-linux64
 
 # Rust
