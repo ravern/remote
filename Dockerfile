@@ -14,7 +14,6 @@ RUN apt-get install -y wget
 RUN apt-get install -y curl
 RUN apt-get install -y tree
 RUN apt-get install -y ripgrep
-RUN apt-get install -y libssl-dev
 
 # Git
 RUN apt-get install -y git
@@ -39,7 +38,6 @@ RUN apt-get install -y python3-neovim
 
 # Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-RUN .cargo/bin/cargo install cargo-edit
 
 # Node.js
 RUN curl https://get.volta.sh | bash -s -- --skip-setup
