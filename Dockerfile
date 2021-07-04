@@ -31,6 +31,10 @@ RUN chmod +x /usr/local/bin/ttyd
 RUN apt-get install -y zsh
 RUN chsh -s /usr/bin/zsh
 RUN ln -s .config/zsh/.zshrc .zshrc
+RUN wget https://github.com/starship/starship/releases/download/v0.55.0/starship-x86_64-unknown-linux-gnu.tar.gz
+RUN tar -xvzf starship-x86_64-unknown-linux-gnu.tar.gz
+RUN rm starship-x86_64-unknown-linux-gnu.tar.gz
+RUN mv starship /usr/local/bin/starship
 
 # Neovim
 RUN apt-get install -y neovim
